@@ -5,9 +5,9 @@ import {
   updateProduct,
   deleteProduct,
   getProductById,
-} from "@/controllers/productController";
-import authMiddleware from "@/middlewares/authMiddleware";
-import roleMiddleware from "@/middlewares/roleMiddleware";
+} from "../controllers/productController";
+import authMiddleware from "../middlewares/authMiddleware";
+import roleMiddleware from "../middlewares/roleMiddleware";
 
 const router = Router();
 

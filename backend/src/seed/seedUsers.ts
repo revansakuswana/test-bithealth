@@ -1,5 +1,5 @@
-import User from "@/models/userModel";
-import { hashPassword } from "@/utils/hash";
+import User from "../models/userModel";
+import { hashPassword } from "../utils/hash";
 
 export async function seedUsers() {
   const users = [

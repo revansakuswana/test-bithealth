@@ -4,8 +4,8 @@ import {
   logout,
   register,
   getProfile,
-} from "@/controllers/authController";
-import authMiddleware from "@/middlewares/authMiddleware";
+} from "../controllers/authController";
+import authMiddleware from "../middlewares/authMiddleware";
 
 const router = Router();
 

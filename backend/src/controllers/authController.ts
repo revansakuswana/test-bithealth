@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import User from "@/models/userModel";
-import { generateToken } from "@/utils/jwt";
-import { hashPassword, comparePassword } from "@/utils/hash";
+import User from "../models/userModel";
+import { generateToken } from "../utils/jwt";
+import { hashPassword, comparePassword } from "../utils/hash";
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import Product from "@/models/productModel";
+import Product from "../models/productModel";
 import { productSchema } from "../validators/productValidator";
 
 // GET all products
