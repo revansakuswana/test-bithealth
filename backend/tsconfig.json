@@ -1,12 +1,30 @@
 {
   "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "baseUrl": "./src",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "paths": {
       "@/*": [
         "*"
       ]
     }
-  }
+  },
+  "include": [
+    "src",
+    "backend",
+    "api"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
