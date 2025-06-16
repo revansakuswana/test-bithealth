@@ -1,0 +1,21 @@
+import { useUser } from "@/hooks/useUser";
+import { Navigate, Outlet } from "react-router-dom";
+import { Progress } from "@/components/ui/progress";
+
+export default function ProtectedRoute() {
+  const { user, loading } = useUser();
+
+  if (loading) {
+    return (
+      <div className="flex h-screen items-center justify-center px-4">
+        <Progress className="w-full max-w-sm" value={66} />
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <Outlet />;
+}
