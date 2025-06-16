@@ -1,13 +1,16 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "_moduleAliases": {
+    "@": "src"
+  },
   "dependencies": {
     "@vendia/serverless-express": "^4.12.6",
     "bcrypt": "^6.0.0",
@@ -16,6 +19,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
     "mongodb": "^6.17.0",
     "mongoose": "^8.15.2",
     "serverless-http": "^3.2.0",
