@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
+    "target": "ES6", 
+    "module": "commonjs", // Sesuai environment Node.js
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "strict": true, // Aktifkan pengecekan ketat
+    "forceConsistentCasingInFileNames": true, // Hindari kesalahan huruf besar-kecil
+    "skipLibCheck": true, // Lewati pengecekan file .d.ts dari lib
+    "outDir": "./dist", // Output hasil compile
+    "rootDir": "./src", // Akar sumber kode TS
     "baseUrl": "./src",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -22,9 +22,9 @@
     "src",
     "backend",
     "api"
-  ],
+  ], // Folder yang ingin dikompilasi
   "exclude": [
     "node_modules",
     "dist"
-  ]
+  ] // Folder yang diabaikan
 }
