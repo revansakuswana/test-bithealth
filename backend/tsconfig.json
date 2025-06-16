@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6", 
+    "target": "ES6",
     "module": "commonjs", // Sesuai environment Node.js
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -8,7 +8,7 @@
     "forceConsistentCasingInFileNames": true, // Hindari kesalahan huruf besar-kecil
     "skipLibCheck": true, // Lewati pengecekan file .d.ts dari lib
     "outDir": "./dist", // Output hasil compile
-    "rootDir": "./src", // Akar sumber kode TS
+    "rootDir": "./", // Akar sumber kode TS
     "baseUrl": "./src",
     "moduleResolution": "node",
     "resolveJsonModule": true,

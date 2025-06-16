@@ -18,8 +18,8 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.json({ message: "API root is working!" });
+app.get("/hello", (req, res) => {
+  res.json({ message: "Hello from Express!" });
 });
 
 app.use(cookieParser());
