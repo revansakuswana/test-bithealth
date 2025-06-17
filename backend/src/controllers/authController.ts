@@ -53,7 +53,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       .cookie("token", token, {
         httpOnly: true,
         secure: true,
-        sameSite: "none",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
         maxAge: 24 * 60 * 60 * 1000,
       })
       .status(200)
@@ -77,7 +77,7 @@ export const logout = async (_req: Request, res: Response): Promise<void> => {
       .clearCookie("token", {
         httpOnly: true,
         secure: true,
-        sameSite: "none",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       })
       .status(200)
       .json({
