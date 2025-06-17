@@ -8,8 +8,8 @@
     "forceConsistentCasingInFileNames": true, // Hindari kesalahan huruf besar-kecil
     "skipLibCheck": true, // Lewati pengecekan file .d.ts dari lib
     "outDir": "./dist", // Output hasil compile
-    "rootDir": "./", // Akar sumber kode TS
-    "baseUrl": "./src",
+    "rootDir": ".", // Akar sumber kode TS
+    "baseUrl": ".",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {

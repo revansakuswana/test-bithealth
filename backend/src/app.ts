@@ -18,10 +18,6 @@ app.use(
   })
 );
 
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hello from Express!" });
-});
-
 app.use(cookieParser());
 app.use(express.json());
 
