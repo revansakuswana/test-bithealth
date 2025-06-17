@@ -1,21 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES6",                                // Target ES6 (atau bisa juga ES2020)
-    "module": "commonjs",                           // Sesuai environment Node.js
+    "target": "ES6",
+    "module": "commonjs",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,                                 // Aktifkan pengecekan ketat
-    "forceConsistentCasingInFileNames": true,       // Hindari kesalahan huruf besar-kecil
-    "skipLibCheck": true,                           // Lewati pengecekan file .d.ts dari lib
-    "outDir": "./dist",                             // Output hasil compile
-    "rootDir": "./src",                             // Akar sumber kode TS
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "build",
+    "rootDir": "src",
     "baseUrl": "./src",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     }
   },
-  "include": ["src", "backend"],             // Folder yang ingin dikompilasi
-  "exclude": ["node_modules", "dist"]               // Folder yang diabaikan
+  "include": [
+    "src",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
