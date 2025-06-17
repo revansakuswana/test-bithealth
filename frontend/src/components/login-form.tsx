@@ -20,7 +20,6 @@ export function LoginForm({
     e.preventDefault();
 
     try {
-      console.log("Sending login request to:", import.meta.env.VITE_BASE_URL);
       const res = await fetch(
         `${import.meta.env.VITE_BASE_URL}/api/auth/login`,
         {
