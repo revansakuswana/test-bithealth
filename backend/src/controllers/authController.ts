@@ -63,7 +63,6 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         data: { id: user._id, email: user.email, role: user.role },
       });
   } catch (err) {
-    console.error("Login error:", err);
     res.status(500).json({
       success: false,
       message: "Server error",
@@ -87,7 +86,6 @@ export const logout = async (_req: Request, res: Response): Promise<void> => {
         user: null,
       });
   } catch (err: any) {
-    console.error("Logout error:", err);
     res.status(500).json({
       success: false,
       message: "Gagal logout",

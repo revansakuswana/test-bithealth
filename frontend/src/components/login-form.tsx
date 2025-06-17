@@ -60,8 +60,6 @@ export function LoginForm({
         toast.error("Gagal mengambil data user");
       }
     } catch (error) {
-      console.error("Login error:", error);
-
       const message =
         error instanceof Error
           ? error.message

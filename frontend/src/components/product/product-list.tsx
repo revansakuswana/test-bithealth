@@ -62,8 +62,14 @@ export default function ProductList() {
         );
         const data = await res.json();
         setProducts(Array.isArray(data.data) ? data.data : []);
-      } catch (err) {
-        console.error("Gagal memuat produk:", err);
+      } catch (error) {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Terjadi kesalahan saat memuat produk";
+        toast.error("Gagal", {
+          description: message,
+        });
       }
     };
 

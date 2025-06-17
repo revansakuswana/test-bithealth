@@ -38,8 +38,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         } else {
           setUser(null);
         }
-      } catch (err) {
-        console.error("Gagal mengambil data pengguna:", err);
+      } catch {
         setUser(null);
       } finally {
         setLoading(false);

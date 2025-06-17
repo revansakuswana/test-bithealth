@@ -38,7 +38,13 @@ export default function ProductEdit() {
         setKode(data.kode);
         setQuantity(data.quantity);
       } catch (error) {
-        console.error("Gagal mengambil produk:", error);
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Terjadi kesalahan saat memuat produk";
+        toast.error("Gagal", {
+          description: message,
+        });
       } finally {
         setLoading(false);
       }
