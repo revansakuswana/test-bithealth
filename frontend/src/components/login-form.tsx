@@ -41,29 +41,13 @@ export function LoginForm({
         return;
       }
 
-      // ✅ Tambahkan delay kecil agar cookie bisa tersimpan
-      await new Promise((resolve) => setTimeout(resolve, 200));
+      setUser(data.data);
 
-      const profileRes = await fetch(
-        `${import.meta.env.VITE_BASE_URL}/api/auth/profile`,
-        {
-          credentials: "include",
-        }
-      );
+      toast.success("Berhasil", {
+        description: data.message,
+      });
 
-      const profileData = await profileRes.json();
-
-      if (profileRes.ok && profileData.success) {
-        setUser(profileData.data);
-        toast.success("Berhasil", {
-          description: data.message,
-        });
-        navigate("/dashboard");
-      } else {
-        toast.error("Gagal", {
-          description: profileData.message,
-        });
-      }
+      navigate("/dashboard");
     } catch (error) {
       const message =
         error instanceof Error ? error.message : "Terjadi kesalahan saat login";
