@@ -57,13 +57,13 @@ export function LoginForm({
         });
         navigate("/dashboard");
       } else {
-        toast.error("Gagal mengambil data user");
+        toast.error("Gagal", {
+          description: profileData.message,
+        });
       }
     } catch (error) {
       const message =
-        error instanceof Error
-          ? error.message
-          : "Terjadi kesalahan saat login";
+        error instanceof Error ? error.message : "Terjadi kesalahan saat login";
 
       toast.error("Gagal", {
         description: message,
