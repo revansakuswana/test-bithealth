@@ -41,6 +41,9 @@ export function LoginForm({
         return;
       }
 
+      // ✅ Tambahkan delay kecil agar cookie bisa tersimpan
+      await new Promise((resolve) => setTimeout(resolve, 200));
+
       const profileRes = await fetch(
         `${import.meta.env.VITE_BASE_URL}/api/auth/profile`,
         {
