@@ -10,11 +10,10 @@ export const getAllProducts = async (
   try {
     const products = await Product.find();
     res.status(200).json({ success: true, data: products });
-  } catch (err) {
+  } catch {
     res.status(500).json({
       success: false,
       message: "Gagal mengambil data produk",
-      error: err,
     });
   }
 };
@@ -54,13 +53,10 @@ export const createProduct = async (
     const parsed = productSchema.safeParse(req.body);
 
     if (!parsed.success) {
-      const errorMessages = parsed.error.errors.map((err) => err.message);
       res.status(400).json({
         success: false,
         message: "Semua FIeld Wajib Diisi",
-        errors: errorMessages,
       });
-      return;
     }
 
     const { kode, nama, quantity } = parsed.data;
@@ -80,11 +76,10 @@ export const createProduct = async (
       message: "Produk berhasil ditambahkan",
       data: product,
     });
-  } catch (err) {
+  } catch {
     res.status(500).json({
       success: false,
       message: "Gagal menambahkan produk",
-      error: err,
     });
   }
 };
