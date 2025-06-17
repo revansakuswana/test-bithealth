@@ -41,9 +41,9 @@ bithealth/
 
 - [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/)
-- [Zod](https://zod.dev/) – untuk validasi skema data
-- [JWT (JSON Web Token)](https://jwt.io/) – untuk autentikasi user
-- [bcrypt](https://www.npmjs.com/package/bcrypt) – untuk password hashing
+- [Zod](https://zod.dev/)
+- [JWT (JSON Web Token)](https://jwt.io/)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 ---
 
@@ -75,4 +75,4 @@ npm run dev (frontend)
 
 ## Link deployment
 
-Buka []() dengan browser Anda untuk melihat hasilnya.
+Buka [test-bithealth.vercel.app](test-bithealth.vercel.app) dengan browser Anda untuk melihat hasilnya.
