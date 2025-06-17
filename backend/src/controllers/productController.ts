@@ -49,14 +49,16 @@ export const createProduct = async (
   res: Response
 ): Promise<void> => {
   try {
-    // Validasi menggunakan zod
     const parsed = productSchema.safeParse(req.body);
 
     if (!parsed.success) {
+      const errorMessages = parsed.error.errors.map((err) => err.message);
       res.status(400).json({
         success: false,
-        message: "Semua FIeld Wajib Diisi",
+        message: "Semua field wajib diisi",
+        errors: errorMessages,
       });
+      return;
     }
 
     const { kode, nama, quantity } = parsed.data;
