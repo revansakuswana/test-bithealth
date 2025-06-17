@@ -1,9 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "src/app.ts",
+  "main": "server.ts",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsc",
+    "vercel-build": "tsc",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +30,6 @@
     "zod": "^3.25.64"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
     "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
