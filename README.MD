@@ -8,10 +8,10 @@ BitHealth warehouse management adalah sebuah platform web sistem manajemen gudan
 ---
 
 ## 📁 Struktur Proyek
-
-bithealth/
-├── frontend/ # Aplikasi React (Vite + TypeScript)
-└── backend/ # Express API (Nodejs + Express + MongoDB)
+.
+├── frontend/ # Aplikasi Frontend (React dengan Vite & TypeScript)
+└── backend/ # Aplikasi Backend (Node.js dengan Express & MongoDB)
+├── README.md
 
 ---
 
