@@ -5,15 +5,14 @@ BitHealth warehouse management adalah sebuah platform web sistem manajemen gudan
 - **Frontend**: Dibangun menggunakan React.js
 - **Backend**: Dibangun menggunakan Node.js + Express + MongoDB
 
----
 
 ## 📁 Struktur Proyek
+
 .
 ├── frontend/ # Aplikasi Frontend (React dengan Vite & TypeScript)
 └── backend/ # Aplikasi Backend (Node.js dengan Express & MongoDB)
 ├── README.md
 
----
 
 ## 🚀 Fitur Utama
 
@@ -23,7 +22,6 @@ BitHealth warehouse management adalah sebuah platform web sistem manajemen gudan
 - ⚙️ Middleware Autentikasi menggunakan JWT
 - ☁️ Deployment backend via Vercel (serverless functions)
 
----
 
 ## 🧰 Teknologi yang Digunakan
 
@@ -35,8 +33,6 @@ BitHealth warehouse management adalah sebuah platform web sistem manajemen gudan
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Lucide React Icons](https://lucide.dev/)
 
----
-
 ## 🔙 Backend
 
 - [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/)
@@ -45,13 +41,9 @@ BitHealth warehouse management adalah sebuah platform web sistem manajemen gudan
 - [JWT (JSON Web Token)](https://jwt.io/)
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 
----
-
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/) 18+
-
----
 
 ## Instalasi
 
