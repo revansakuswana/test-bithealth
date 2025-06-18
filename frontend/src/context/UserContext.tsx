@@ -35,6 +35,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         const result = await res.json();
         if (res.ok && result.success) {
           setUser(result.data);
+          console.log(result.data);
         } else {
           setUser(null);
         }
